@@ -4,6 +4,7 @@
 </head>
 <body>
   <script> 
+    console.log(window.location.href);
     var queryStart = window.location.href.indexOf("?") + 1,
         queryEnd   = window.location.href.indexOf("#") + 1 || url.length + 1,
         query = window.location.href.slice(queryStart, queryEnd - 1),
