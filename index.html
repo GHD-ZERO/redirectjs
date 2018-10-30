@@ -4,8 +4,10 @@
 </head>
 <body>
   <script> 
-    alert(window.location.href);
-    //window.location.href = page;
+    console.log(window.location.href);
+    var location = window.location.href;
+    page = location.split('uxl=');
+    console.log(page[1]);
     
   </script>
 </body>
