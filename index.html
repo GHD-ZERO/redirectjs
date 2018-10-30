@@ -4,10 +4,11 @@
 </head>
 <body>
   <script> 
-    console.log(window.location.href);
-    var location = window.location.href;
-    page = location.split('uxl=');
-    console.log(page);
+    function getQueryStringValue (key) {  
+     return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+    }  
+ 
+    console.log(getQueryStringValue('uxl'));
     
   </script>
 </body>
